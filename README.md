@@ -3,6 +3,7 @@ a simple micropython lib (class) to drive Sitronix ST7567 128*64 dot matrix LCD 
 
 the main.py is to show you how to initialize it and call method in the ST7567 file.
 main.py用来让你知道怎样实例化和调用内部方法
+
 the ST7567.py is the lib file you can use in your project.
 你可以将ST7567.py作为库文件用在你的工程内
 
