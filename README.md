@@ -18,3 +18,6 @@ Hope it helps...
 希望能帮到你咯
 
 ![running effect](https://github.com/ChangboBro/ST7567-micropython-framebuff/blob/main/1665837163204.jpg?raw=true)
+
+Update 2023.4.1: the ST7567_obsolete.py is the old version of ST7567.py. The new version is simpler and faster.
+2023.4.1更新：ST7567_obsolete.py是原始的版本，现在的ST7567.py相比之前的更简单，运行的更快速
