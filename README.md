@@ -38,6 +38,7 @@ pins of Ras-Pi-pico|pins of your screen
 1   |a0(dc)
 5   |cs
 4   |rst
+
 You have many options to connect your screen and your Ras-Pi-pico, its not fixed.
 This program did't implement functions that need miso, so actually you don't need to connect that.
 BL pin controls the backlight of your screen.
