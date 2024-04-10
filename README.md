@@ -22,3 +22,25 @@ Hope it helps...
 Update 2023.4.1: the ST7567_obsolete.py is the old version of ST7567.py. The new version is simpler and faster.
 
 2023.4.1更新：ST7567_obsolete.py是原始的版本，现在的ST7567.py相比之前的更简单，运行的更快速
+
+2024.4.10：
+In the demo file, the spi and lcd object is defined as:
+``` python3
+spi = SPI(0,baudrate=200_000, polarity=1, phase=1, sck=Pin(2), mosi=Pin(3),miso=Pin(16))#under 20Mhz is OK
+lcd=ST7567(spi,a0=Pin(1),cs=Pin(5),rst=Pin(4),elecvolt=0x32,regratio=0x05,invX=False,invY=True,invdisp=0)
+``` 
+So, you should connect them as this if you test your screen with the demo file:
+pins of Ras-Pi-pico|pins of your screen
+|---|---|
+2   |sck(scl)
+3   |mosi(sda)
+16(optional)  |miso(out?)
+1   |a0(dc)
+5   |cs
+4   |rst
+You have many options to connect your screen and your Ras-Pi-pico, its not fixed.
+This program did't implement functions that need miso, so actually you don't need to connect that.
+BL pin controls the backlight of your screen.
+VCC/GND are power pins, this screen uses 3.3v for power.
+You can change the pin arrangement of your circuit, as long as you change your code too. 
+Note the SPI pins should conform to the constrain of Raspberry Pi Pico Pinout.
