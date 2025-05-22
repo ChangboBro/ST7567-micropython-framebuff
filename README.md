@@ -45,3 +45,5 @@ BL pin controls the backlight of your screen.
 VCC/GND are power pins, this screen uses 3.3v for power.
 You can change the pin arrangement of your circuit, as long as you change your code too. 
 Note the SPI pins should conform to the constrain of Raspberry Pi Pico Pinout.
+
+Update 2025.5.22: If you have to mirror the X axis, you may have to edit the `COLLAD_SET` parameter as 0x04, since the GDRAM of this chip is 132*64
